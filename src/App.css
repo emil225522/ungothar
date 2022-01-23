@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+
+}
+
+.main-font {
+  font-family: 'Hanalei Fill', cursive;
 }
 
 .App-logo {
@@ -36,3 +41,4 @@
     transform: rotate(360deg);
   }
 }
+
