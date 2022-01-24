@@ -1,22 +1,14 @@
 import { styled } from "@stitches/react";
-import logo from "./assets/images/link.jpg";
 
-function Header() {
+function Footer() {
   return (
     <Wrapper>
       <InnerWrapper>
         <Left>
-          <a href="/">
-            <Image src={logo}></Image>
-          </a>
-
+          <LinkItem>Emil Jönsson</LinkItem>
+          <LinkItem>Emil Jönsson</LinkItem>
           <LinkItem>Emil Jönsson</LinkItem>
         </Left>
-
-        <Right>
-          <LinkItem href="/projects"> project </LinkItem>
-          <LinkItem href="/about-me"> about me </LinkItem>
-        </Right>
       </InnerWrapper>
     </Wrapper>
   );
@@ -24,20 +16,11 @@ function Header() {
 
 const Wrapper = styled("div", {
   margin: "auto",
-  position: "fixed",
-  width: "100%",
-  top: 0,
   backgroundColor: "#a87932",
   padding: "16px 16px",
-  boxShadow: "0 4px 4px rgba(0, 0, 0, 0.4)",
 });
 
-const Image = styled("img", {
-  width: "48px",
-  height: "48px",
-  borderRadius: "20%",
-  cursor: "pointer",
-});
+const Image = styled("img", {});
 
 const InnerWrapper = styled("div", {
   display: "flex",
@@ -54,15 +37,11 @@ const LinkItem = styled("a", {
   margin: "0px 8px",
 });
 
-const Right = styled("div", {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-});
 const Left = styled("div", {
   display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
 });
 
-export default Header;
+export default Footer;
