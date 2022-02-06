@@ -1,21 +1,46 @@
 import logo from "./../assets/images/link.jpg";
 import { styled } from "../theme/stitches.config";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <Wrapper>
       <InnerWrapper>
         <Left>
-          <a href="/">
-            <Image src={logo}></Image>
-          </a>
-
-          <LinkItem>Emil Jönsson</LinkItem>
+          <LinkItem>
+            <NavLink
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textDecoration: "none",
+                color: "black",
+              }}
+              to="/"
+            >
+              <Image src={logo}></Image>
+              <LinkItem>Emil Jönsson</LinkItem>
+            </NavLink>
+          </LinkItem>
         </Left>
 
         <Right>
-          <LinkItem href="/projects"> Projects </LinkItem>
-          <LinkItem href="/about-me"> About me </LinkItem>
+          <LinkItem>
+            <NavLink
+              style={{ textDecoration: "none", color: "black" }}
+              to="/projects"
+            >
+              Projects
+            </NavLink>
+          </LinkItem>
+          <LinkItem>
+            <NavLink
+              style={{ textDecoration: "none", color: "black" }}
+              to="/about-me"
+            >
+              About me
+            </NavLink>
+          </LinkItem>
         </Right>
       </InnerWrapper>
     </Wrapper>
@@ -25,7 +50,7 @@ function Header() {
 const Wrapper = styled("div", {
   margin: "auto",
   position: "fixed",
-  width: "100%",
+  width: "100vw",
   top: 0,
   backgroundColor: "#a87932",
   padding: "16px 0px",
@@ -42,11 +67,12 @@ const Image = styled("img", {
 const InnerWrapper = styled("div", {
   display: "flex",
   margin: "auto",
+  px: 4,
   justifyContent: "space-between",
   maxWidth: "1320px",
 });
 
-const LinkItem = styled("a", {
+const LinkItem = styled("div", {
   "&:hover": {
     textDecoration: "underline",
     cursor: "pointer",

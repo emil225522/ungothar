@@ -9,10 +9,4 @@ const Wrapper = styled("div", {
   height: "100%",
 });
 
-const Text = styled("p", {
-  fontSize: "16px",
-});
-
-const PageHeading = styled("h1", { margin: "auto", textAlign: "center" });
-
 export default StartPage;

@@ -18,8 +18,7 @@ const Wrapper = styled("div", {
   margin: "auto",
   backgroundColor: "#a87932",
   padding: "16px 16px",
-  width: "100%",
-  position: "absolute",
+  position: "relative",
 });
 
 const Image = styled("img", {});

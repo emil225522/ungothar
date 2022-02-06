@@ -4,31 +4,31 @@ import AboutPage from "./pages/AboutPage";
 import StartPage from "./pages/StartPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import { styled } from "./theme/stitches.config";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Footer from "./Shared/Footer";
 
 function App() {
   return (
     <Wrapper className="main-font">
-      <Background />
-      <Header />
+      <BrowserRouter>
+        <Background />
+        <Header />
 
-      <Page>
-        <BrowserRouter>
+        <Page>
           <Routes>
             <Route path="/" element={<StartPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>
-        </BrowserRouter>
-      </Page>
-      <Footer />
+        </Page>
+        <Footer />
+      </BrowserRouter>
     </Wrapper>
   );
 }
 
 const Wrapper = styled("div", {
-  width: "100wv",
+  width: "100vw",
   margin: "auto",
 });
 
@@ -36,6 +36,7 @@ const Background = styled("div", {
   backgroundImage: `url(${"background.jpg"})`,
   filter: "brightness(60%)",
   backgroundSize: "cover",
+  backgroundPosition: "50% 50%",
   position: "fixed",
   height: "100vh",
   width: "100vw",
@@ -43,15 +44,14 @@ const Background = styled("div", {
 });
 
 const Page = styled("div", {
-  width: "100%",
+  width: "auto",
   maxWidth: "1320px",
   minHeight: "100vh",
-  margin: "85px auto",
   paddingTop: "32px",
+
   px: 16,
-});
-const Text = styled("p", {
-  fontSize: "16px",
+  margin: "0 auto",
+  marginTop: "80px",
 });
 
 const PageHeading = styled("h1", { margin: "auto", textAlign: "center" });
