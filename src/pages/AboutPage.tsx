@@ -7,9 +7,9 @@ function AboutPage() {
     <Wrapper className="main-font">
       <TextBox
         header="asdasd"
-        text="My name is Emil Jönsson. I am a 23 year old computer science student with
+        text="My name is Emil Jönsson. I am a 24 year old front-ender with an education in computer science. I have
       a big passion for coding and learning new things. I am currently living in
-      Lund. I love most types of programming but have a special fondness for web
+      Malmö. I love most types of programming but have a special fondness for web
       development and game development. I also love music and playing the banjo!
       🪕"
       />

@@ -74,6 +74,7 @@ const InnerWrapper = styled("div", {
 });
 
 const LinkItem = styled("div", {
+  transition: "all 2s",
   "&:hover": {
     textDecoration: "underline",
     cursor: "pointer",

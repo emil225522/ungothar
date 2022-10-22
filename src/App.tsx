@@ -34,7 +34,7 @@ const Wrapper = styled("div", {
 });
 
 const Background = styled("div", {
-  backgroundImage: `url(${"background.jpg"})`,
+  backgroundImage: `url("background.jpg")`,
   filter: "brightness(60%)",
   backgroundSize: "cover",
   backgroundPosition: "50% 50%",
@@ -58,6 +58,9 @@ const Page = styled("div", {
   marginTop: "80px",
 });
 
-const PageHeading = styled("h1", { margin: "auto", textAlign: "center" });
+const PageHeading = styled("h1", {
+  margin: "auto",
+  textAlign: "center",
+});
 
 export default App;
