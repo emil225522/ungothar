@@ -1,3 +1,4 @@
+import React from "react";
 import { styled } from "../theme/stitches.config";
 
 type PropTypes = {
@@ -16,6 +17,9 @@ const Wrapper = styled("div", {
   backgroundColor: "$primary",
   borderRadius: "10px",
   p: 4,
+  "@mediaMinLarge": {
+    p: 8,
+  },
 });
 
 const Text = styled("p", {

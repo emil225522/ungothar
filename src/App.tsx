@@ -6,6 +6,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import { styled } from "./theme/stitches.config";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Footer from "./Shared/Footer";
+import React from "react";
 
 function App() {
   return (
@@ -13,7 +14,6 @@ function App() {
       <BrowserRouter>
         <Background />
         <Header />
-
         <Page>
           <Routes>
             <Route path="/" element={<StartPage />} />
@@ -30,6 +30,7 @@ function App() {
 const Wrapper = styled("div", {
   width: "100vw",
   margin: "auto",
+  overflowX: "hidden",
 });
 
 const Background = styled("div", {
@@ -49,7 +50,10 @@ const Page = styled("div", {
   minHeight: "100vh",
   paddingTop: "32px",
 
-  px: 16,
+  px: 4,
+  "@mediaMinLarge": {
+    px: 8,
+  },
   margin: "0 auto",
   marginTop: "80px",
 });

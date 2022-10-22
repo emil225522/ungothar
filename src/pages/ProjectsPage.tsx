@@ -1,5 +1,6 @@
 import { styled } from "../theme/stitches.config";
 import TextBox from "../Shared/TextBox";
+import React from "react";
 
 function ProjectsPage() {
   return (
@@ -21,7 +22,6 @@ const Wrapper = styled("div", { width: "100%" });
 const ContentArea = styled("div", {
   width: "100%",
   display: "grid",
-  maxWidth: "70%",
   mxa: "",
 });
 

@@ -41,7 +41,7 @@ export const {
       //Colors with the same purpose need to have the same name on all themes to be overidable.
       //These should be used to support theming and variations, button texts need to be seperated
       //from a specific color so allow themes to controll button, link etc sepretly from the main body
-      primary: '$grey900',
+      primary: '#a87932',
       secondary: '$white',
       accent: '#F7EDDA',
       textPrimary: '$grey1000',
@@ -175,23 +175,20 @@ export const {
     sizes,
   },
   utils: {
-    p: (value: number) => ({
-      padding: value * MULTIPLIER,
+    p: (value: number | string) => ({
+      padding: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    pb: (value: number) => ({
-      paddingBottom: value * MULTIPLIER,
+    pb: (value: number | string) => ({
+      paddingBottom: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    pt: (value: number) => ({
-      paddingTop: value * MULTIPLIER,
+    pt: (value: number | string) => ({
+      paddingTop: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    pl: (value: number) => ({
-      paddingleft: value * MULTIPLIER,
+    pl: (value: number | string) => ({
+      paddingLeft: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    plx: (value: string) => ({
-      paddingleft: `${value}px`,
-    }),
-    pr: (value: number) => ({
-      paddingRight: value * MULTIPLIER,
+    pr: (value: number | string) => ({
+      paddingRight: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
     py: (value: number | string) => ({
       paddingTop: typeof value === 'string' ? value : value * MULTIPLIER,
@@ -201,118 +198,94 @@ export const {
       paddingLeft: typeof value === 'string' ? value : value * MULTIPLIER,
       paddingRight: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    m: (value: number) => ({
-      margin: value * MULTIPLIER,
+    m: (value: number | string) => ({
+      margin: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    my: (value: number) => ({
-      marginTop: value * MULTIPLIER,
-      marginBottom: value * MULTIPLIER,
+    my: (value: number | string) => ({
+      marginTop: typeof value === 'string' ? value : value * MULTIPLIER,
+      marginBottom: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    mx: (value: number) => ({
-      marginLeft: value * MULTIPLIER,
-      marginRight: value * MULTIPLIER,
+    mx: (value: number | string) => ({
+      marginLeft: typeof value === 'string' ? value : value * MULTIPLIER,
+      marginRight: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    mxa: () => ({
-      marginLeft: 'auto',
-      marginRight: 'auto',
+    mt: (value: number | string) => ({
+      marginTop: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    mya: () => ({
-      marginTop: 'auto',
-      marginBottom: 'auto',
+    mb: (value: number | string) => ({
+      marginBottom: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    mt: (value: number) => ({
-      marginTop: value * MULTIPLIER,
+    mr: (value: number | string) => ({
+      marginRight: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    mb: (value: number) => ({
-      marginBottom: value * MULTIPLIER,
+    ml: (value: number | string) => ({
+      marginLeft: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    mr: (value: number) => ({
-      marginRight: value * MULTIPLIER,
+    g: (value: number | string) => ({
+      gap: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    ml: (value: number) => ({
-      marginLeft: value * MULTIPLIER,
+    gcg: (value: number | string) => ({
+      gridColumnGap: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    g: (value: number) => ({
-      gap: value * MULTIPLIER,
+    grg: (value: number | string) => ({
+      gridRowGap: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    gg: (value: number) => ({
-      gridGap: value * MULTIPLIER + 'px',
+    b: (value: number | string) => ({
+      bottom: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    gcg: (value: number) => ({
-      gridColumnGap: value * MULTIPLIER,
-    }),
-    grg: (value: number) => ({
-      gridRowGap: value * MULTIPLIER,
-    }),
-    b: (value: number) => ({
-      bottom: value * MULTIPLIER,
-    }),
-    t: (value: number) => ({
-      top: value * MULTIPLIER,
-    }),
-    tp: (value: number) => ({
-      top: `${value}%`,
-    }),
-    tm: (value: number) => ({
-      top: `-${value * MULTIPLIER}`,
+    t: (value: number | string) => ({
+      top: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
     l: (value: number | string) => ({
       left: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    lp: (value: number) => ({
-      left: `${value}%`,
+    r: (value: number | string) => ({
+      right: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    r: (value: number) => ({
-      right: value * MULTIPLIER,
+    tblr: (value: number | string) => ({
+      top: typeof value === 'string' ? value : value * MULTIPLIER,
+      bottom: typeof value === 'string' ? value : value * MULTIPLIER,
+      left: typeof value === 'string' ? value : value * MULTIPLIER,
+      right: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    rm: (value: number) => ({
-      right: `-${value * MULTIPLIER}`,
+    br: (value: number | string) => ({
+      borderRadius: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    br: (value: number) => ({
-      borderRadius: value,
+    blr: (value: number | string) => ({
+      borderTopLeftRadius: typeof value === 'string' ? value : value * MULTIPLIER,
+      borderBottomLeftRadius:
+        typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    brm: (value: number) => ({
-      borderRadius: value * MULTIPLIER,
+    bw: (value: number | string) => ({
+      borderWidth: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    brp: (value: number) => ({
-      borderRadius: `${value}%`,
+    btw: (value: number | string) => ({
+      borderTopWidth: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    bw: (value: number) => ({
-      borderWidth: value * MULTIPLIER,
-    }),
-    btw: (value: number) => ({
-      borderTopWidth: value * MULTIPLIER,
-    }),
-    bbw: (value: number) => ({
-      borderBottomWidth: value * MULTIPLIER,
+    bbw: (value: number | string) => ({
+      borderBottomWidth: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
     blw: (value: number) => ({
       borderLeftWidth: value * MULTIPLIER,
     }),
-    wh: (value: number) => ({
-      width: value * MULTIPLIER,
-      height: value * MULTIPLIER,
+    brw: (value: number) => ({
+      borderRightWidth: value * MULTIPLIER,
+    }),
+    wh: (value: number | string) => ({
+      width: typeof value === 'string' ? value : value * MULTIPLIER,
+      height: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
     w: (value: number | string) => ({
       width: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
-    wp: (value: number) => ({
-      width: `${value}%`,
-    }),
     h: (value: number | string) => ({
       height: typeof value === 'string' ? value : value * MULTIPLIER,
-    }),
-    hp: (value: number) => ({
-      height: `${value}%`,
     }),
     minH: (value: number | string) => ({
       minHeight: typeof value === 'string' ? value : value * MULTIPLIER,
     }),
     maxH: (value: number | string) => ({
       maxHeight: typeof value === 'string' ? value : value * MULTIPLIER,
-    }),
-    maxHP: (value: number) => ({
-      maxHeight: `${value}%`,
     }),
     minW: (value: number | string) => ({
       minWidth: typeof value === 'string' ? value : value * MULTIPLIER,

@@ -1,6 +1,7 @@
-import logo from "./../assets/images/link.jpg";
+import logo from "../assets/images/link.jpg";
 import { styled } from "../theme/stitches.config";
 import { NavLink } from "react-router-dom";
+import React from "react";
 
 function Header() {
   return (
@@ -36,7 +37,7 @@ function Header() {
           <LinkItem>
             <NavLink
               style={{ textDecoration: "none", color: "black" }}
-              to="/about-me"
+              to="/about"
             >
               About me
             </NavLink>
@@ -50,7 +51,7 @@ function Header() {
 const Wrapper = styled("div", {
   margin: "auto",
   position: "fixed",
-  width: "100vw",
+  width: "100%",
   top: 0,
   backgroundColor: "#a87932",
   padding: "16px 0px",
