@@ -4,7 +4,7 @@ import AboutPage from "./pages/AboutPage";
 import StartPage from "./pages/StartPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import { styled } from "./theme/stitches.config";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Shared/Footer";
 import React from "react";
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <Wrapper className="main-font">
       <BrowserRouter>
-        <Background />
+        <Background className="background-image" />
         <Header />
         <Page>
           <Routes>
@@ -34,7 +34,6 @@ const Wrapper = styled("div", {
 });
 
 const Background = styled("div", {
-  backgroundImage: `url("background.jpg")`,
   filter: "brightness(60%)",
   backgroundSize: "cover",
   backgroundPosition: "50% 50%",
