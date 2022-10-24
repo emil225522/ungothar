@@ -1,15 +1,20 @@
-import { styled } from "@stitches/react";
+import { styled } from "../theme/stitches.config";
 import React from "react";
 
 function Footer() {
   return (
     <Wrapper>
       <InnerWrapper>
-        <Left>
+        <Column>
           <LinkItem>Emil Jönsson</LinkItem>
           <LinkItem>Emil Jönsson</LinkItem>
           <LinkItem>Emil Jönsson</LinkItem>
-        </Left>
+        </Column>
+        <Column>
+          <LinkItem>Emil Jönsson</LinkItem>
+          <LinkItem>Emil Jönsson</LinkItem>
+          <LinkItem>Emil Jönsson</LinkItem>
+        </Column>
       </InnerWrapper>
     </Wrapper>
   );
@@ -17,8 +22,10 @@ function Footer() {
 
 const Wrapper = styled("div", {
   margin: "auto",
+  w: "100%",
+  display: "fixed",
   backgroundColor: "#a87932",
-  padding: "16px 16px",
+  py: 4,
   position: "relative",
 });
 
@@ -27,8 +34,9 @@ const Image = styled("img", {});
 const InnerWrapper = styled("div", {
   display: "flex",
   margin: "auto",
-  justifyContent: "space-between",
   maxWidth: "1320px",
+  px: 8,
+  justifyContent: "space-between",
 });
 
 const LinkItem = styled("a", {
@@ -39,11 +47,9 @@ const LinkItem = styled("a", {
   margin: "0px 8px",
 });
 
-const Left = styled("div", {
+const Column = styled("div", {
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
 });
 
 export default Footer;
