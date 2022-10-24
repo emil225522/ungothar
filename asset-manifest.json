@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/ungothar/static/css/main.19493f60.chunk.css",
-    "main.js": "/ungothar/static/js/main.d0fcb132.chunk.js",
-    "main.js.map": "/ungothar/static/js/main.d0fcb132.chunk.js.map",
+    "main.js": "/ungothar/static/js/main.4ba1fa99.chunk.js",
+    "main.js.map": "/ungothar/static/js/main.4ba1fa99.chunk.js.map",
     "runtime-main.js": "/ungothar/static/js/runtime-main.42424f99.js",
     "runtime-main.js.map": "/ungothar/static/js/runtime-main.42424f99.js.map",
-    "static/js/2.8e7f8e1e.chunk.js": "/ungothar/static/js/2.8e7f8e1e.chunk.js",
-    "static/js/2.8e7f8e1e.chunk.js.map": "/ungothar/static/js/2.8e7f8e1e.chunk.js.map",
+    "static/js/2.1afd73e3.chunk.js": "/ungothar/static/js/2.1afd73e3.chunk.js",
+    "static/js/2.1afd73e3.chunk.js.map": "/ungothar/static/js/2.1afd73e3.chunk.js.map",
     "index.html": "/ungothar/index.html",
     "static/css/main.19493f60.chunk.css.map": "/ungothar/static/css/main.19493f60.chunk.css.map",
-    "static/js/2.8e7f8e1e.chunk.js.LICENSE.txt": "/ungothar/static/js/2.8e7f8e1e.chunk.js.LICENSE.txt",
+    "static/js/2.1afd73e3.chunk.js.LICENSE.txt": "/ungothar/static/js/2.1afd73e3.chunk.js.LICENSE.txt",
     "static/media/App.css": "/ungothar/static/media/background.5ef59953.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.42424f99.js",
-    "static/js/2.8e7f8e1e.chunk.js",
+    "static/js/2.1afd73e3.chunk.js",
     "static/css/main.19493f60.chunk.css",
-    "static/js/main.d0fcb132.chunk.js"
+    "static/js/main.4ba1fa99.chunk.js"
   ]
 }
